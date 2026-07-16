@@ -1,0 +1,845 @@
+/* ==========================================
+   PROYECTO OLIVO
+   Fiore & Eze
+   Pantallas 1 y 2
+========================================== */
+
+/* ---------- RESET ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+/* ---------- HTML ---------- */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+/* ---------- COLORES ---------- */
+
+:root{
+
+    --manteca:#FFF8EA;
+    --oliva:#66754A;
+    --oliva-oscuro:#55613E;
+    --ocre:#B89A63;
+    --terracota:#C87E5A;
+    --blanco:#FFFFFF;
+    --texto:#4D4D4D;
+
+}
+
+/* ---------- BODY ---------- */
+
+body{
+
+    background:var(--manteca);
+
+    color:var(--texto);
+
+    font-family:'Cormorant Garamond', serif;
+
+    overflow-x:hidden;
+
+    scroll-behavior:smooth;
+    
+    line-height:1.5;
+
+}
+
+/* ---------- PANTALLAS ---------- */
+
+section{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:120px 30px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+            PANTALLA 1
+========================================== */
+
+#inicio{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:var(--manteca);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1;
+}
+
+.flores{
+
+    position:absolute;
+
+    top:10px;
+
+    right:0;
+
+    width:100%;
+
+    height:auto;
+
+    pointer-events:none;
+
+    opacity:.95;
+}
+
+/* Círculo */
+
+#circulo{
+
+    width:210px;
+    height:210px;
+
+    border-radius:50%;
+
+    background:var(--oliva);
+
+    display:flex;
+
+    flex-direction:row;
+
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.8s;
+    
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.5s;
+    
+    border:2px solid rgba(255,255,255,.15);
+
+    
+}
+
+  #circulo:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* Iniciales */
+
+#logo{
+
+    color:white;
+    
+    font-size:60px;
+    
+    letter-spacing:10px;
+    
+    font-weight:300;
+
+}
+
+.linea{
+
+    width:90px;
+
+    height:1px;
+
+    background:#66754A;
+
+    margin:30px 0 20px;
+
+    opacity:.7;
+
+}
+
+/* Texto abrir */
+
+#abrir{
+
+    margin-top:35px;
+
+    color:var(--oliva);
+
+    font-size:18px;
+    
+    letter-spacing:5px;
+    
+    text-transform:uppercase;
+
+    font-weight:400;
+
+    cursor:pointer;
+
+  
+}
+
+
+
+/* ==========================================
+            PANTALLA 2
+========================================== */
+
+#presentacion{
+
+
+    background:var(--oliva);
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/* Nombres */
+
+#presentacion h1{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:92px;
+
+    font-weight:400;
+
+    line-height:1;
+
+}
+
+/* & */
+
+#presentacion h2{
+
+    margin:10px 0;
+
+    font-size:42px;
+
+    font-weight:300;
+
+}
+
+/* Fecha */
+
+.fecha{
+
+    margin-top:35px;
+
+    font-size:28px;
+
+    letter-spacing:6px;
+
+}
+/* ==========================================
+            ANIMACIONES
+========================================== */
+
+#inicio.ocultar{
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity .8s ease;
+
+}
+
+
+/* ==========================================
+            PANTALLAS 3 A 6
+========================================== */
+
+
+/* ---------- CONTENEDOR GENERAL ---------- */
+
+.contenedor{
+
+    width:90%;
+    max-width:700px;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+/* ---------- PANTALLA 3
+          INVITACION
+========================================== */
+
+#invitacion{
+
+    background:var(--manteca);
+
+    color:var(--oliva);
+
+}
+
+
+.monograma{
+
+    width:150px;
+    height:150px;
+
+    border-radius:50%;
+
+    background:var(--oliva);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:56px;
+
+    letter-spacing:8px;
+
+    margin-bottom:45px;
+
+}
+
+
+.texto-invitacion{
+
+   font-size:34px;
+   
+   line-height:1.7;
+
+    font-weight:300;
+
+}
+
+
+/* ---------- PANTALLA 4
+          CONTADOR
+========================================== */
+
+#contador{
+
+    background:var(--oliva);
+
+    color:white;
+
+}
+
+
+.titulo-contador{
+
+    font-size:38px;
+
+    letter-spacing:4px;
+
+    margin-bottom:40px;
+
+}
+
+
+#cuentaRegresiva{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+
+.numero{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+.numero span{
+
+    font-size:60px;
+
+    font-weight:300;
+
+}
+
+
+.numero small{
+
+    font-size:20px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ---------- PANTALLA 5 Y 6
+       CEREMONIA / FIESTA
+========================================== */
+
+
+#ceremonia,
+#fiesta{
+
+    background:var(--manteca);
+
+    color:var(--oliva);
+
+}
+
+
+#ceremonia h2,
+#fiesta h2{
+
+    font-size:55px;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+}
+
+
+#ceremonia p,
+#fiesta p{
+
+    font-size:28px;
+
+    line-height:1.6;
+
+}
+
+
+.boton{
+
+    display:inline-block;
+
+    margin-top:40px;
+
+    padding:14px 45px;
+
+    border:1px solid var(--oliva);
+
+    border-radius:50px;
+
+    color:var(--oliva);
+
+    text-decoration:none;
+
+    font-size:22px;
+
+    font-weight:500;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+
+}
+
+
+.boton:hover{
+
+    background:var(--oliva);
+
+    color:white;
+
+}
+/* ==========================================
+      COMPOSICIÓN CEREMONIA
+========================================== */
+
+.evento{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:40px;
+
+    width:100%;
+
+}
+
+.icono-evento{
+
+    width:140px;
+
+    height:auto;
+
+    flex-shrink:0;
+
+}
+
+.info-evento{
+
+    text-align:left;
+
+}
+
+
+/* ==========================================
+            PANTALLA 7
+            REGALOS
+========================================== */
+
+#regalos{
+
+    background:var(--oliva);
+
+    color:var(--manteca);
+
+}
+
+
+#regalos h2{
+
+    font-size:55px;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+}
+
+
+.texto-seccion{
+
+    font-size:28px;
+
+    line-height:1.6;
+
+    max-width:500px;
+
+    margin-bottom:25px;
+
+}
+
+/* ==========================================
+            MODAL REGALOS
+========================================== */
+
+
+#modalRegalo{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(102,117,74,.75);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:.4s;
+
+}
+
+
+#modalRegalo.mostrar{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+
+.tarjeta-regalo{
+
+    width:90%;
+
+    max-width:420px;
+
+    background:var(--oliva);
+
+    color:var(--manteca);
+
+    padding:60px 45px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    position:relative;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.18);
+
+}
+
+
+.tarjeta-regalo h3{
+
+    font-family:'Great Vibes', cursive;
+
+    font-size:55px;
+
+    font-weight:400;
+
+}
+
+
+.tarjeta-regalo p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+}
+
+
+.tarjeta-regalo strong{
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+    display:block;
+
+    margin-top:8px;
+
+
+}
+
+
+#cerrarRegalo{
+
+    position:absolute;
+
+    top:10px;
+
+    right:20px;
+
+    font-size:35px;
+
+    cursor:pointer;
+
+}
+/* ==========================================
+        PANTALLA 8
+        INFORMACIÓN TARJETA
+========================================== */
+
+
+#tarjeta{
+
+    background:var(--manteca);
+
+    color:var(--oliva);
+
+}
+
+
+#tarjeta h2{
+
+    font-size:48px;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+
+}
+
+
+#tarjeta .texto-seccion{
+
+    font-size:28px;
+
+    line-height:1.6;
+
+    max-width:500px;
+
+}
+
+
+.precio{
+
+    font-size:45px;
+
+    letter-spacing:3px;
+
+    margin:35px 0;
+
+    font-weight:500;
+
+}
+/* ==========================================
+        PANTALLA 9
+        CONFIRMACIÓN
+========================================== */
+
+
+#confirmacion{
+
+    background:var(--oliva);
+
+    color:var(--manteca);
+
+}
+
+
+#confirmacion h2{
+
+    font-size:55px;
+
+    font-weight:400;
+
+    margin-bottom:35px;
+
+}
+
+
+#confirmacion .boton{
+
+    border-color:var(--manteca);
+
+    color:var(--manteca);
+
+}
+
+
+#confirmacion .boton:hover{
+
+    background:var(--manteca);
+
+    color:var(--oliva);
+
+}
+
+
+.despedida{
+
+    margin-top:70px;
+
+}
+
+
+.instagram-link{
+
+    margin-top:25px;
+
+    color:var(--manteca);
+
+    text-decoration:none;
+
+    font-size:35px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+}
+
+.instagram-link:hover{
+
+    opacity:.7;
+
+}
+
+/* ==========================================
+            CELULAR
+========================================== */
+
+@media(max-width:600px){
+
+
+    .texto-invitacion{
+
+        font-size:24px;
+
+    }
+
+
+    #cuentaRegresiva{
+
+        gap:12px;
+
+    }
+
+
+    .numero span{
+
+        font-size:42px;
+
+    }
+
+
+    #ceremonia h2,
+    #fiesta h2{
+
+        font-size:42px;
+
+    }
+
+
+    #ceremonia p,
+    #fiesta p{
+
+        font-size:22px;
+
+    }
+
+    .evento{
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.icono-evento{
+
+    width:150px;
+
+}
+
+.info-evento{
+
+    text-align:center;
+
+}
+}
